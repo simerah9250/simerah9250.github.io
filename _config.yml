@@ -1,6 +1,6 @@
 # Site
-name: "Rfazriansyah376"
-title: "Rfazriansyah376"
+name: "simerah"
+title: "simerah"
 description: "my blog is a blog about entertainment and interesting information"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
@@ -48,7 +48,7 @@ jekyll-archives:
     category: '/category/:name/'
     
 # Pagination 
-paginate: 5
+paginate: 6
 paginate_path: /page:num/
     
 # Other
