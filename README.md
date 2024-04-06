@@ -1,3 +1,2 @@
-HomePage / index : polos <br />
-Default post : text 1<br />
+niche - seo
 categories : KW mateng<br />
