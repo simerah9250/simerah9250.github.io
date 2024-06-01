@@ -33,25 +33,25 @@
 		{
 			"@type": "ListItem",
 			"position": 1,
-			"name": "flora_0ne leaks photo",
+			"name": "photo",
 			"item": "https://simerah9250.github.io"
 		},
 		{
 			"@type": "ListItem",
 			"position": 2,
-			"name": "flora_0ne leaked video",
+			"name": "video",
 			"item": "https://simerah9250.github.io/page2/"
 		},
 		{
 			"@type": "ListItem",
 			"position": 3,
-			"name": "flora_0ne private collections",
+			"name": "leak",
 			"item": "https://simerah9250.github.io/page3/"
 		},
 		{
 			"@type": "ListItem",
 			"position": 4,
-			"name": "flora_0ne personal gallery",
+			"name": "leaked",
 			"item": "https://simerah9250.github.io/page4/"
 		}
 	]
@@ -346,15 +346,15 @@ div.bcd140526_post_feed.column a.thumbnail img {
 //<![CDATA[
 function bwstoc() {
  var bwstoc = i = headinglength = getheading = 0;
- headinglength = document.getElementById("post-toc").querySelectorAll("h2, li, h3, h4").length;
+ headinglength = document.getElementById("post-toc").querySelectorAll("h2, p, h3, h4").length;
  if (headinglength > 1) { 
  // Hanya Tampil Jika Ditemukan Minimal 2 Heading
  for (i = 0; i < headinglength; i++) {
- getheading = document.getElementById("post-toc").querySelectorAll("h2, li, h3, h4")[i].textContent;
+ getheading = document.getElementById("post-toc").querySelectorAll("h2, p, h3, h4")[i].textContent;
  var bws_1 = getheading.replace(/[^a-z0-9]/gi," ");
  var bws_2 = bws_1.trim();
  var getHeadUri = bws_2.replace(/s/g, "_");
- document.getElementById("post-toc").querySelectorAll("h2, li, h3, h4")[i].setAttribute("id", getHeadUri);
+ document.getElementById("post-toc").querySelectorAll("h2, p, h3, h4")[i].setAttribute("id", getHeadUri);
  bwstoc = "<li><a href='#" + getHeadUri + "'>" + getheading + "</a></li>";
  document.getElementById("bwstoc").innerHTML += bwstoc;
  }
