@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+<link rel="icon" href="{{ site.url }}/assets/images/logo.png"/>
+
+
+{% seo %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ page.title }}",
+  "description": "{{ page.title }}",
+  "thumbnailUrl": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+  "uploadDate": "{{ page.date }}",
+  "duration": "PT55M47S",
+  "contentUrl": "https://video.twimg.com/ext_tw_video/1143674758455648262/pu/vid/320x630/fhxIIe2IBzgv6J7T.mp4"
+}
+</script>
+
+	<!--breadcrumb-->
+		<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "photo",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?photo"
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "video",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?video"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "leaked contents",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?leaked"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "more collections",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?collection"
+		}
+	]
+}
+</script><!--breadcrumb-->
+	
+	<!-- sitelinks -->
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "WebSite",
+	"url": "{{ site.url }}",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "{{ site.url }}{{ site.baseurl }}/?q={search_term_string}",
+		"query-input": "required name=search_term_string"
+	}
+}
+</script><!-- sitelinks -->
+	
+	
+	<!-- how to -->
+	<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "HowTo",
+	"name": "{{ page.title }}",
+	"description": "{{ page.title }}",
+	"image": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+	"totalTime": "PT57M",
+	"estimatedCost": {
+		"@type": "MonetaryAmount",
+		"currency": "USD",
+		"value": "2"
+	},
+	"step": [
+		{
+			"@type": "HowToStep",
+			"name": "find download link",
+			"text": "find download link on the page",
+			"image": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+			"url": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
+		},
+		{
+			"@type": "HowToStep",
+			"name": "click download button",
+			"text": "click download button on the page",
+			"image": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+			"url": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
+		}
+	]
+}
+</script><!-- how to -->
+
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    
+<link href="{{ site.url }}/assets/css/screen.css" rel="stylesheet"/>
+
+<link href="{{ site.url }}/assets/css/main.css" rel="stylesheet"/>
+
+<script src="{{ site.url }}/assets/js/jquery.min.js"></script>
+
+
+
+
+	
+		<style type="text/css">
+    img, iframe, div, details, ol, ul, li, b:section, b:widget, b:include, b:if, b:with, button, script, noscript, video, p {
+        loading: lazy;
+    }
+</style>
+
+
+	
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+        /* Sidebar styles */
+        .sidebar {
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: -260px;
+            transition: right 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sidebar.open {
+            right: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+        .sidebar ul li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: background-color 0.3s;
+        }
+        .sidebar ul li a i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .sidebar ul li a:hover {
+            background-color: #555555;
+        }
+        .menu-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1100;
+            cursor: pointer;
+            background-color: #333333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .menu-toggle:hover {
+            background-color: #555555;
+        }
+
+        /* Main content styles */
+        .main-content {
+            background-color: #ffffff;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .sidebar.open {
+                right: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                right: -100%;
+                width: 100%;
+                max-width: 260px;
+            }
+            .sidebar.open {
+                right: 0;
+            }
+        }
+        .sidebar ul li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #00aaff;
+    transition: background-color 0.3s, color 0.3s; /* Transisi untuk perubahan warna */
+}
+
+.sidebar ul li a:hover {
+    background-color: #555555; /* Warna latar belakang saat hover */
+    color: #00aaff; /* Warna teks saat hover */
+}
+h1 {
+    color: #00aaff; /* Warna teks judul */
+}
+.main-content h2 {
+    color: #00aaff; /* Warna teks judul */
+}
+.main-content h3 {
+    color: #00aaff; /* Warna teks judul */
+}
+.main-content h4 {
+    color: #00aaff; /* Warna teks judul */
+}
+b {
+    color: #00aaff; /* Warna teks judul */
+}	
+.menu-toggle {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Transisi untuk efek */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-toggle:hover {
+    background-color: #555555;
+    color: #00aaff; /* Warna teks saat tombol dihover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+    </style>
+
+    
+
+</head>
+<body>
+	
+
+    
+	    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
+	
+	
+	   
+	
+	   
+     
+    <div class="container" style="overflow:auto;">
+        <div class="sidebar" style="overflow:auto;"><br /><br /><br />
+         
+
+  <ul>
+    <li>
+       <details><summary><h4>East Asia</h4></summary>
+      <ul>
+        <li>China, Japan, South Korea</li>
+        <li>Taiwan, Mongolia, North Korea</li>
+      </ul>      </details>
+
+    </li>
+    <li>
+       <details><summary><h4>Southeast Asia</h4></summary>
+      <ul>
+        <li>Thailand, Vietnam, Indonesia</li>
+        <li>Malaysia, Philippines, Singapore</li>
+        <li>Myanmar, Cambodia, Laos</li>
+      </ul>      </details>
+    </li>
+    <li>
+       <details><summary><h4>South Asia</h4></summary>
+      <ul>
+        <li>India, Pakistan, Bangladesh</li>
+        <li>Nepal, Sri Lanka, Bhutan</li>
+        <li>Maldives, Afghanistan, Iran</li>
+      </ul>      </details>
+    </li>
+    <li>
+       <details><summary><h4>Central Asia</h4></summary>
+      <ul>
+        <li>Kazakhstan, Uzbekistan, Turkmenistan</li>
+        <li>Kyrgyzstan, Tajikistan, Afghanistan</li>
+      </ul>      </details>
+    </li>
+  </ul>      </details>
+  
+  <!-- Similar structure for other regions -->
+  
+  <h3>Europe</h3>
+  <ul>
+    <li>
+       <details><summary><h4>Western Europe</h4></summary>
+      <ul>
+        <li>France, Germany, United Kingdom</li>
+        <li>Italy, Spain, Netherlands</li>
+        <!-- Add more countries as needed -->
+      </ul>      </details>
+    </li>
+    <li>
+       <details><summary><h4>Eastern Europe</h4></summary>
+      <ul>
+        <li>Russia, Poland, Ukraine</li>
+        <li>Czech Republic, Hungary, Slovakia</li>
+        <!-- Add more countries as needed -->
+      </ul>      </details>
+    </li>
+    <!-- Add more regions and countries -->
+  </ul>      
+  
+  
+            
+        </div>
+
+        <div class="main-content">
+      
+            
+            	<div id='at09ads' style='width:100%;margin:auto; float:none;overflow:hidden; display:scroll;position:fixed; top:0%;z-index:9999'>
+    <div style='display:block;width:100%;height:60px;overflow:hidden;margin:auto;background-color:#fff; padding:0px;'>
+      <span class="menu-toggle" onclick="toggleSidebar()">
+                Menu
+            </span>
+	    
+  <h1 style="position:absolute;
+        top:14px;
+        left:1px;
+        width:15em;
+        font-size:1.5em;
+        padding:0;">
+	  <a href="/">
+  {{ site.name }}
+  </a></h1>
+    
+    </div></div>
+    
+            	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	</noscript>
+            
+            <div class="site-content">
+
+<div class="container">
+            <div class="main-content">
+      {{ content }}
+      </div>     </div>
+        </div>
+        </div>
+    </div>
+<a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';"></a><span id="spoiler_id" style="display: none;"><a class="link" onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';"></a>
+<div style="background-color: rgba(0, 0, 0, 0); margin: 1px;">
+<div class="smallfont"><i><span style="font-size: 16px; font-weight: bold; margin-right: 3px;"></span></i><input onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'new posts'; }" style="background-color: #00000000; font-size: 16px; width: auto;" type="button" value="new posts" />
+</div>
+<div class="alt2" style="background-color: rgba(255, 255, 255, 0); margin: 0px; padding: 0px;">
+<div style="display: none;" loading="lazy">
+
+
+	<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags" >
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            {% assign categories_list = site.categories %}
+            {% if categories_list.first[0] == null %}
+                {% for category in categories_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                {% endfor %}
+            {% else %}
+                {% for category in categories_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                {% endfor %}
+            {% endif %}
+            {% assign categories_list = nil %}
+		</div>
+	</div>
+</div>
+
+	</div></div></div></span>
+	
+<footer class="footer">
+    <div class="container">
+    
+
+    
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+      <a href="/terms-and-conditions">Terms and Conditions</a>&nbsp; •&nbsp;<a href="/privacy-policy">Privacy Policy</a>
+		    <br />
+		    Copyright © {{ site.time | date: "%Y" }}&nbsp;-&nbsp;<a href="{{ site.url }}">{{ site.name }}</a>
+		
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="{{ site.url }}/assets/js/mediumish.js"></script>
+
+{% if site.lazyimages == "enabled" %}
+<script src="{{ site.url }}/assets/js/lazyload.js"></script>
+{% endif %}
+
+<script src="{{ site.url }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+{% if page.layout == 'post' %}
+<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
+{% endif %}
+    
+</body>
+</html>
