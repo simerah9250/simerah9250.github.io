@@ -275,7 +275,8 @@ b {
 	
 
 
-	<!-- 😜😜related post😜😛 start -->
+<!-- 😜😜related post😜😛 start -->
+	<br /><br /><br />
 <style>
 	.postingan-serupa-wrapper {
     overflow: hidden;
@@ -353,7 +354,7 @@ b {
 <div class="postingan-serupa-wrapper">
     <h3>Related Posts</h3>
     <div class="postingan-serupa">
-        {% for post in site.categories[page.category] %}
+        {% for post in site.categories.seo limit: 999 %}
             {% if post.url != page.url %}
                 <div class="related-post">
                     <a href="{{ post.url }}">
