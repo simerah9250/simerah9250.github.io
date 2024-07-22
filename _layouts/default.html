@@ -274,6 +274,85 @@ b {
 <span style="color:#fff;" class="{{layout}}" ></span>
 	
 
+
+	<!-- 😜😜related post😜😛 start -->
+<style>
+	.postingan-serupa-wrapper {
+    overflow: hidden;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.postingan-serupa {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.related-post {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+}
+
+.related-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.related-post h4 {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.postingan-serupa::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.scroll-buttons button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+	</style>
+	
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const relatedPosts = document.querySelector('.postingan-serupa');
+        const leftArrow = document.querySelector('.scroll-left');
+        const rightArrow = document.querySelector('.scroll-right');
+
+        leftArrow.addEventListener('click', () => {
+            relatedPosts.scrollBy({
+                left: -200,
+                behavior: 'smooth'
+            });
+        });
+
+        rightArrow.addEventListener('click', () => {
+            relatedPosts.scrollBy({
+                left: 200,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+
+	<!-- 😜😜related post😜😛 end -->
     
 	    <script>
         function toggleSidebar() {
