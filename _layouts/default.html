@@ -277,9 +277,10 @@ b {
 
 <!-- 😜😜related post😜😛 start -->
 	<br /><br /><br />
-<style>
+<div style="padding:10px;">
+	<style>
 	.postingan-serupa-wrapper {
-    overflow: hidden;
+    overflow: auto;
     padding: 20px 0;
     margin: 20px 0;
 }
@@ -352,7 +353,7 @@ b {
     });
 </script>
 <div class="postingan-serupa-wrapper">
-    <h3>Related Posts</h3>
+    <p>Featured Posts</p>
     <div class="postingan-serupa">
         {% for post in site.categories.seo limit: 999 %}
             {% if post.url != page.url %}
@@ -371,6 +372,8 @@ b {
     </div>
 </div>
 
+
+</div>
 	<!-- 😜😜related post😜😛 end -->
     
 	    <script>
