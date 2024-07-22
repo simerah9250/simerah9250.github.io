@@ -577,6 +577,64 @@ b {
     <br />
   <center>  <b>Ad by Adsterra</b><br />
     <hr />
+<link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css" type="text/css" />
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script><center>
+<video id='my-video2' controls autoplay loop muted style="width:100%; height:auto;" >
+   <source src='https://video.twimg.com/ext_tw_video/1161908304215302144/pu/vid/360x640/6yUS0cax9Ulck1N0.mp4' title='my video' type='video/mp4' />
+</source></video></center>
+<script type="application/javascript">
+    var testVideo = fluidPlayer(
+        "my-video2",
+{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 1,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoplay": true,
+		"mute": true,
+		"allowTheatre": true,
+		"playPauseAnimation": true,
+		"playbackRateEnabled": true,
+		"allowDownload": true,
+		"playButtonShowing": true,
+		"fillToContainer": true,
+		"posterImage": "<data:blog.postImageUrl/>"
+	},
+	"vastOptions": {
+	"adList": [
+                    {
+                        "roll": "preRoll",
+                        "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=ef4cbd999a3567d73e9272f0b67d9c09"
+                    },
+                    {
+                        "roll": "midRoll",
+                        "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=6f6732348ac4680e3e347f51038ca52e",
+                        "timer": 1
+                    },
+                    {
+                        "roll": "midRoll",
+                        "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=b320bff569bb5535540366abcef11a09",
+                        "timer": 2
+                    },
+{
+                        "roll": "midRoll",
+                        "vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=f76eb4092d4b94ed2411172982571a87",
+                        "timer": 3
+                    },
+            ]
+        }
+}
+    );
+</script>
+
+	  <hr />
   <script type="text/javascript">
 	atOptions = {
 		'key' : '8c3f4c07f4823b0a09c58bd25bf40e7f',
@@ -869,6 +927,72 @@ b {
     });
 </script>
 	
+
+	<!-- tabunder + url rotator -->
+<script>
+    // URL Feed Blogger
+    const feedUrl = 'https://www.ioma.my.id/feeds/posts/default/?start-index=1&max-results=6666&alt=json-in-script&callback=rak_info_Load';
+
+    // Fungsi untuk mengambil data dari feed
+    function fetchFeed() {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = feedUrl;
+            document.body.appendChild(script);
+
+            window.rak_info_Load = (data) => {
+                const entries = data.feed.entry.map(entry => entry.link.find(link => link.rel === 'alternate').href);
+                resolve(entries);
+            };
+
+            script.onerror = () => reject('Failed to load feed.');
+        });
+    }
+
+    // Fungsi untuk memilih URL secara acak dari feed
+    function getRandomUrl(urls) {
+        return urls[Math.floor(Math.random() * urls.length)];
+    }
+
+    // Fungsi untuk membuka tab baru dengan URL yang dirotasi
+    function openTabUnder(url) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        document.body.appendChild(a);
+        const evt = document.createEvent('MouseEvents');
+        evt.initMouseEvent('click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+        a.dispatchEvent(evt);
+        document.body.removeChild(a);
+    }
+
+    // Fungsi untuk memeriksa apakah tabunder sudah dibuka sebelumnya
+    function hasTabUnderOpened() {
+        return localStorage.getItem('tabunderOpened') === 'true';
+    }
+
+    // Fungsi untuk menandai bahwa tabunder sudah dibuka
+    function markTabUnderOpened() {
+        localStorage.setItem('tabunderOpened', 'true');
+    }
+
+    // Event listener untuk klik
+    document.addEventListener('click', async () => {
+        if (!hasTabUnderOpened()) {
+            try {
+                const urls = await fetchFeed();
+                const randomUrl = getRandomUrl(urls);
+                openTabUnder(randomUrl);
+                markTabUnderOpened();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    });
+</script>
+
+	<!-- tabunder + url rotator -->
+
 	
 </body>
 </html>
